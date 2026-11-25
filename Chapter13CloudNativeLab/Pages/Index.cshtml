@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+
+@{
+    ViewData["Title"] = Configuration["AppSettings:SiteTitle"];
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Configuration["AppSettings:SiteTitle"]</h1>
+
+    <p>Chapter 13: Developing Cloud-Native Apps</p>
+
+    <p>Cloud-Native Resilience and Health Endpoints</p>
+
+    <p>Application health status is available below.</p>
+
+    <a href="/health">Check Application Health</a>
+</div>
